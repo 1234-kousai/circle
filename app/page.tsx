@@ -11,7 +11,7 @@ export default function HomePage() {
   const leadRef = useRef<HTMLDivElement>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showCompass, setShowCompass] = useState(false)
-  const [showText, setShowText] = useState(false)
+  const [showText, setShowText] = useState(true)
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
