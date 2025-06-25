@@ -25,7 +25,7 @@ export default function HomePage() {
 
     const textTimer = setTimeout(() => {
       setShowText(true)
-    }, 3000) // Text appears after compass animation completes
+    }, 1200) // Text appears after compass animation completes
 
     const observer = new IntersectionObserver(
       (entries) => {
