@@ -157,27 +157,27 @@ export default function HomePage() {
               {/* Main Content */}
               <div className="space-y-8 md:space-y-10 max-w-6xl mx-auto">
                 <div className="text-center">
-                  <p className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '0s'}}>
+                  <p className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight opacity-100">
                       <span className="text-orange-500 drop-shadow-lg">大学という</span><span className="text-blue-600 mx-2 drop-shadow-lg">無限の可能性</span><span className="text-gray-800">を前に、</span><br className="md:hidden" />
                       <span className="text-purple-600 drop-shadow-lg bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">立ち止まっている君へ。</span>
                     </p>
                   </div>
 
                   <div className="text-center">
-                    <p className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '0.4s'}}>
+                    <p className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight opacity-100">
                       <span className="text-red-500 drop-shadow-lg">燻らせている</span><span className="text-blue-600 mx-2 drop-shadow-lg">その情熱</span><span className="text-gray-700">の、</span><br className="md:hidden" />
                       <span className="text-green-600 drop-shadow-lg">次なる舞台は</span><span className="text-orange-600 font-black drop-shadow-lg bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mx-1">ここにある。</span>
                     </p>
                   </div>
 
                   <div className="py-6 md:py-8 text-center">
-                    <p className={`text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight transform hover:scale-110 transition-transform duration-300 ${showText ? 'animate-pulse-glow' : 'opacity-0'}`} style={{animationDelay: '0.8s'}}>
+                    <p className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight transform hover:scale-110 transition-transform duration-300 opacity-100">
                       <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 bg-clip-text text-transparent drop-shadow-2xl">未来を、デザインしよう。</span>
                     </p>
                   </div>
 
                   <div className="text-center">
-                    <p className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '1.2s'}}>
+                    <p className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight opacity-100">
                       <span className="text-blue-600 drop-shadow-lg">東大キャリア支援団体</span><br className="lg:hidden" />
                       <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-blue-500 bg-clip-text text-transparent drop-shadow-2xl mx-2 text-5xl md:text-6xl lg:text-7xl">『羅針盤』</span><br className="lg:hidden" />
                       <span className="text-orange-600 drop-shadow-lg">へようこそ。</span>
@@ -186,10 +186,10 @@ export default function HomePage() {
 
                   <div className="pt-10 md:pt-12 text-center">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
-                      <div className={`text-gray-900 mb-4 ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '1.6s'}}>
+                      <div className="text-gray-900 mb-4 opacity-100">
                         <span className="text-gray-800">君の</span><span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent mx-2">「好き」</span><span className="text-gray-800">を</span><span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mx-2">羅針盤</span><span className="text-gray-800">に、</span>
                       </div>
-                      <div className={`text-gray-900 ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '2s'}}>
+                      <div className="text-gray-900 opacity-100">
                         <span className="text-gray-700">最高の仲間と共に、</span><br className="lg:hidden" />
                         <span className="text-blue-600 font-black drop-shadow-lg">心から熱中できる何か</span><span className="text-gray-700">を見つけよう。</span>
                       </div>
