@@ -17,13 +17,16 @@ export default function HomePage() {
   useEffect(() => {
     // Initial mount
     setIsLoaded(true)
+    console.log('Component mounted, starting animation sequence')
     
     // Elegant sequence: Compass appears immediately, then text follows
     const compassTimer = setTimeout(() => {
+      console.log('Setting showCompass to true')
       setShowCompass(true)
     }, 800) // Compass appears after brief delay
 
     const textTimer = setTimeout(() => {
+      console.log('Setting showText to true')
       setShowText(true)
     }, 1200) // Text appears after compass animation completes
 
@@ -149,48 +152,49 @@ export default function HomePage() {
             </div>
 
             {/* Main Content */}
-            <div className={`text-center space-y-8 md:space-y-12 max-w-6xl mx-auto transition-all duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="text-center space-y-8 md:space-y-12 max-w-6xl mx-auto">
               
               {/* Main Content */}
               <div className="space-y-8 md:space-y-10 max-w-6xl mx-auto">
                 <div className="text-center">
-                  <p className="typewriter-paragraph delay-0 text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect">
-                    <span className="text-orange-500">大学という</span><span className="text-blue-600 mx-2">無限の可能性</span><span className="text-gray-800">を前に、</span><br className="md:hidden" />
-                    <span className="text-purple-600 pulse-glow">立ち止まっている君へ。</span>
-                  </p>
-                </div>
+                  <p className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '0s'}}>
+                      <span className="text-orange-500 drop-shadow-lg">大学という</span><span className="text-blue-600 mx-2 drop-shadow-lg">無限の可能性</span><span className="text-gray-800">を前に、</span><br className="md:hidden" />
+                      <span className="text-purple-600 drop-shadow-lg bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">立ち止まっている君へ。</span>
+                    </p>
+                  </div>
 
-                <div className="text-center">
-                  <p className="typewriter-paragraph delay-2 text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect">
-                    <span className="text-red-500">燻らせている</span><span className="text-blue-600 mx-2">その情熱</span><span className="text-gray-700">の、</span><br className="md:hidden" />
-                    <span className="text-green-600">次なる舞台は</span><span className="text-orange-600 font-black pulse-glow mx-1">ここにある。</span>
-                  </p>
-                </div>
+                  <div className="text-center">
+                    <p className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '0.4s'}}>
+                      <span className="text-red-500 drop-shadow-lg">燻らせている</span><span className="text-blue-600 mx-2 drop-shadow-lg">その情熱</span><span className="text-gray-700">の、</span><br className="md:hidden" />
+                      <span className="text-green-600 drop-shadow-lg">次なる舞台は</span><span className="text-orange-600 font-black drop-shadow-lg bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mx-1">ここにある。</span>
+                    </p>
+                  </div>
 
-                <div className="py-6 md:py-8 text-center">
-                  <p className="typewriter-paragraph delay-1 text-4xl md:text-5xl lg:text-6xl text-purple-600 font-black text-glow-effect leading-tight animate-scale-pulse pulse-glow bg-gradient-to-r from-purple-50/40 to-pink-50/40 px-6 py-4 rounded-2xl border border-purple-200/30">
-                    未来を、デザインしよう。
-                  </p>
-                </div>
+                  <div className="py-6 md:py-8 text-center">
+                    <p className={`text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight transform hover:scale-110 transition-transform duration-300 ${showText ? 'animate-pulse-glow' : 'opacity-0'}`} style={{animationDelay: '0.8s'}}>
+                      <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 bg-clip-text text-transparent drop-shadow-2xl">未来を、デザインしよう。</span>
+                    </p>
+                  </div>
 
-                <div className="text-center">
-                  <p className="typewriter-paragraph delay-3 text-hero-lg md:text-hero-xl font-bold leading-tight text-glow-effect">
-                    <span className="text-blue-600">東大キャリア支援団体</span><br className="lg:hidden" />
-                    <span className="gradient-text font-black text-glow-effect pulse-glow mx-2 text-2xl md:text-3xl">『羅針盤』</span><br className="lg:hidden" />
-                    <span className="text-orange-600">へようこそ。</span>
-                  </p>
-                </div>
+                  <div className="text-center">
+                    <p className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '1.2s'}}>
+                      <span className="text-blue-600 drop-shadow-lg">東大キャリア支援団体</span><br className="lg:hidden" />
+                      <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-blue-500 bg-clip-text text-transparent drop-shadow-2xl mx-2 text-5xl md:text-6xl lg:text-7xl">『羅針盤』</span><br className="lg:hidden" />
+                      <span className="text-orange-600 drop-shadow-lg">へようこそ。</span>
+                    </p>
+                  </div>
 
-                <div className="pt-10 md:pt-12 text-center">
-                  <h1 className="text-hero-xl md:text-4xl lg:text-5xl font-black leading-tight">
-                    <div className="typewriter-advanced delay-5 text-gray-900 text-glow-effect pulse-glow mb-4">
-                      <span className="text-gray-800">君の</span><span className="gradient-text mx-2">「好き」</span><span className="text-gray-800">を</span><span className="gradient-text mx-2">羅針盤</span><span className="text-gray-800">に、</span>
-                    </div>
-                    <div className="typewriter-advanced delay-6 text-gray-900 text-glow-effect pulse-glow">
-                      <span className="text-gray-700">最高の仲間と共に、</span><br className="lg:hidden" />
-                      <span className="text-blue-600 font-black">心から熱中できる何か</span><span className="text-gray-700">を見つけよう。</span>
-                    </div>
-                  </h1>
+                  <div className="pt-10 md:pt-12 text-center">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
+                      <div className={`text-gray-900 mb-4 ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '1.6s'}}>
+                        <span className="text-gray-800">君の</span><span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent mx-2">「好き」</span><span className="text-gray-800">を</span><span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mx-2">羅針盤</span><span className="text-gray-800">に、</span>
+                      </div>
+                      <div className={`text-gray-900 ${showText ? 'animate-hero-text-entrance' : 'opacity-0'}`} style={{animationDelay: '2s'}}>
+                        <span className="text-gray-700">最高の仲間と共に、</span><br className="lg:hidden" />
+                        <span className="text-blue-600 font-black drop-shadow-lg">心から熱中できる何か</span><span className="text-gray-700">を見つけよう。</span>
+                      </div>
+                    </h1>
+                  </div>
                 </div>
               </div>
             </div>

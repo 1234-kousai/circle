@@ -9,6 +9,18 @@ const config: Config = {
     "./src/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'typewriter-paragraph',
+    'typewriter-advanced',
+    'typewriter-sentence',
+    'delay-0',
+    'delay-1',
+    'delay-2',
+    'delay-3',
+    'delay-4',
+    'delay-5',
+    'delay-6',
+  ],
   prefix: "",
   theme: {
     container: {

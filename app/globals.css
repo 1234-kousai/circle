@@ -358,16 +358,26 @@
     opacity: 0;
     animation: fadeInScale 1.2s ease-out forwards;
     font-weight: 700;
+    animation-fill-mode: both;
   }
 
   .typewriter-sentence {
     opacity: 0;
     animation: fadeInScale 1s ease-out forwards;
+    animation-fill-mode: both;
   }
 
   .typewriter-paragraph {
     opacity: 0;
     animation: fadeInScale 0.8s ease-out forwards;
+    animation-fill-mode: both;
+  }
+  
+  /* Force visibility after animation */
+  .typewriter-advanced.show,
+  .typewriter-sentence.show,
+  .typewriter-paragraph.show {
+    opacity: 1 !important;
   }
 
   .text-reveal-dramatic {
@@ -386,12 +396,12 @@
 
   /* Timing utilities for sequential animation */
   .delay-0 { animation-delay: 0s; }
-  .delay-1 { animation-delay: 1.5s; }
-  .delay-2 { animation-delay: 3s; }
-  .delay-3 { animation-delay: 4.5s; }
-  .delay-4 { animation-delay: 6s; }
-  .delay-5 { animation-delay: 7.5s; }
-  .delay-6 { animation-delay: 9s; }
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.6s; }
+  .delay-3 { animation-delay: 0.9s; }
+  .delay-4 { animation-delay: 1.2s; }
+  .delay-5 { animation-delay: 1.5s; }
+  .delay-6 { animation-delay: 1.8s; }
   .delay-7 { animation-delay: 10.5s; }
   .delay-8 { animation-delay: 12s; }
   .delay-9 { animation-delay: 13.5s; }
@@ -426,6 +436,15 @@
   .text-hero-sm {
     font-size: clamp(0.9rem, 2.5vw, 1.4rem);
     line-height: 1.5;
+  }
+
+  /* Hero text entrance animation */
+  .animate-hero-text-entrance {
+    animation: heroTextEntrance 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  .animate-pulse-glow {
+    animation: heroTextEntrance 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, pulseGlow 2s ease-in-out infinite 1.2s;
   }
 
   .animate-hero-bg {
@@ -587,11 +606,11 @@
 }
 
 @keyframes fadeInScale {
-  0% {
+  from {
     opacity: 0;
-    transform: scale(0.8) translateY(40px);
+    transform: scale(0.9) translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
@@ -716,9 +735,36 @@
   }
 }
 
+@keyframes heroTextEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+    filter: blur(10px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-10px) scale(1.05);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Ensure animations run */
+@media (prefers-reduced-motion: no-preference) {
+  .typewriter-paragraph,
+  .typewriter-advanced,
+  .typewriter-sentence {
+    animation-play-state: running !important;
+  }
 }
 
 /* Custom hover effects for buttons */
